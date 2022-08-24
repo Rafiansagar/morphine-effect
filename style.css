@@ -1,0 +1,77 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: url(images/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.menu-part {
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  transform: translateX(-50%);
+  list-style: none;
+}
+.menu-part li {
+  display: inline-block;
+  margin-right: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.menu-part li a {
+  text-decoration: none;
+  color: transparent;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  line-height: 1;
+}
+.menu-part li a:after {
+  position: absolute;
+  content: attr(data-attr);
+  left: 0;
+  top: 20px;
+  transition: all 0.3s;
+  color: #212121;
+}
+.menu-part li a:before {
+  position: absolute;
+  content: attr(data-attr);
+  left: 0;
+  top: 0;
+  transition: all 0.3s;
+  color: #212121;
+}
+.menu-part li a:hover:after {
+  top: 0;
+}
+.menu-part li a:hover:before {
+  top: -20px;
+}
+.menu-part li:last-child {
+  margin: 0;
+}
+.sagar {
+  position: absolute;
+  content: '';
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+}
+svg {
+  fill: #f06;
+  fill: url(#MyGradient);
+}
